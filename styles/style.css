@@ -1,0 +1,135 @@
+/* CSS files add styling rules to your content */
+
+/* ---------- VARIABLES ---------- */
+/* CSS variables can be used to store a value, and then called later. This makes it 
+  easier to set the same colour multiple times, and to create themes for a webpage. 
+  By changing the variable, you change the colour of all the elements using it. This 
+  is faster.
+*/
+
+/* Default Theme */
+html {
+  --bgc: #FFD5D5;
+  --bgheaderc: #DEE1E6;
+  --bgnavc: #343A40;
+  --navafgc: #fff;
+  --navabgc: #ACE01B;
+  --hoverc: #111;
+  --activec: #B42F32;
+  --h1fontc: #B42F32;
+  --subheadfontc: #B42F32;
+  --contentc: black;
+  --bgimage: url(https://cdn.glitch.com/0900391a-cce4-42a2-b486-03d204ab8cd0%2Flight_background%20(
+      1
+    ).jpg?v=1619122696580);
+  --footerbgc: #DEE1E6;
+  --footerfgc: #B42F32;
+  transition: all 0.1s;
+}
+
+/* ---------- BODY ---------- */
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: var(--bgc);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-style: italic;
+  color: var(--h1fontc);
+}
+.container {
+  /*Fill the entire page width*/
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+/* -------------------------- TITLE ------------------- */
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  width: 100%;
+  background-color: var(--bgheaderc);
+  text-align: center;
+}
+/* -------------------------- NAVBAR ------------------- */
+#logo {
+  width: 10%; /* making icon responsive */
+  height: auto;
+  float: left;
+  padding: 5px;
+}
+/* Source for navbar styling from https://www.w3schools.com/css/css_navbar_horizontal.asp */
+.navbar {
+  overflow: hidden;
+  background-color: var(--bgnavc);
+  padding-top:5px;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+.navbar li {
+  float: left;
+}
+.navbar li a {
+  display: block;
+  color: var(--navafgc);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar li a:hover:not(.active) {
+  background-color: var(--hoverc);
+}
+.navbar .active {
+  background-color: var(--activec);
+}
+/*end of styling from https://www.w3schools.com/css/css_navbar_horizontal.asp */
+/* -------------------------- SUB-HEADING ------------------- */
+h2,
+h3 {
+  font-style: italic;
+  color: var(--subheadfontc);
+}
+/* -------------------------- CONTENT ------------------- */
+#content {
+  border-style: inset;
+  margin: 0;
+  border: 0;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+}
+.clearfix::after {
+  /* The Clearfix hack: https://www.w3schools.com/cssref/pr_class_float.asp */
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#database img {
+  width: 100%;
+}
+
+/* -------------------------- FOOTER ------------------- */
+/* Fixed footer source - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--footerbgc);
+  color: var(--footerfgc);
+  text-align: center;
+}
